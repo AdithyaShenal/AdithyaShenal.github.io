@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <div>Adithya Shenal Welivtage</div>
+      <div>Adithya Shenal Welivtage AS</div>
     </>
   );
 }
