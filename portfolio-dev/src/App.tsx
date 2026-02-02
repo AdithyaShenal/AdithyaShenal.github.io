@@ -1,7 +1,15 @@
+import Hero from "./components/Hero";
+import NavBar from "./components/NavBar";
+
 function App() {
   return (
     <>
-      <div>Adithya Shenal Welivtage AS</div>
+      <nav>
+        <NavBar />
+      </nav>
+      <header>
+        <Hero />
+      </header>
     </>
   );
 }
