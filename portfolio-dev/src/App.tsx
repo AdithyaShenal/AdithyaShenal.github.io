@@ -1,5 +1,8 @@
+import EducationSection from "./components/EducationSection";
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
+import ProjectsSection from "./components/ProjectsSection";
+import TechStackSection from "./components/TechStackSection";
 
 function App() {
   return (
@@ -10,6 +13,15 @@ function App() {
       <header>
         <Hero />
       </header>
+      <section>
+        <TechStackSection />
+      </section>
+      <section>
+        <ProjectsSection />
+      </section>
+      <section>
+        <EducationSection />
+      </section>
     </>
   );
 }
