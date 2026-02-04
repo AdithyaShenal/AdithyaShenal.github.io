@@ -5,12 +5,12 @@ import RepoButton from "./buttons/RepoButton";
 import { Link } from "react-router-dom";
 
 const Project_1 = () => {
-  const cvLink =
-    "https://rawcdn.githack.com/AdithyaShenal/AdithyaShenal.github.io/b7fe6d816cc9470e9f61b7551c58f375d92c335e/jayani_anuththara_intern_cv.pdf";
+  // const cvLink =
+  //   "https://rawcdn.githack.com/AdithyaShenal/AdithyaShenal.github.io/b7fe6d816cc9470e9f61b7551c58f375d92c335e/jayani_anuththara_intern_cv.pdf";
 
-  const handleViewCV = () => {
-    window.open(cvLink, "_blank", "noopener,noreferrer");
-  };
+  // const handleViewCV = () => {
+  //   window.open(cvLink, "_blank", "noopener,noreferrer");
+  // };
 
   const devRepos = [
     {
@@ -55,8 +55,6 @@ const Project_1 = () => {
 
   return (
     <div className="relative">
-      <button className="btn btn-primary">View Full CV</button>
-
       {/* ─── TOP BADGE ROW ─── */}
       <div className="flex flex-wrap items-center gap-2 mb-5">
         <span className="inline-flex items-center gap-1.5 bg-blue-500/10 border border-blue-500/25 text-blue-400 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
@@ -132,7 +130,6 @@ const Project_1 = () => {
               </button>
               <button className="inline-flex items-center gap-2 bg-blue-500/15 border border-blue-500/30 text-blue-400 hover:bg-blue-500/25 text-xs font-semibold px-4 py-2 rounded-full transition-colors duration-200">
                 <Cog size={14} />
-
                 <Link to="projectOneArch">System Architecture</Link>
               </button>
             </div>
