@@ -25,34 +25,34 @@ const NavBar = () => {
             </div>
             <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
               <li>
-                <a>Home</a>
+                <a href="#hero">Home</a>
               </li>
               <li>
-                <a>Projects</a>
+                <a href="#projects">Projects</a>
               </li>
               <li>
-                <a>Education</a>
+                <a href="#education">Education</a>
               </li>
               <li>
-                <a>Contact</a>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Adithya Shenal</a>
+          <a className="btn btn-ghost text-xl"> &lt; Adithya Shenal / &gt; </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <a href="#hero">Home</a>
             </li>
             <li>
-              <a>Projects</a>
+              <a href="#projects">Projects</a>
             </li>
             <li>
-              <a>Education</a>
+              <a href="#education">Education</a>
             </li>
             <li>
-              <a>Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>

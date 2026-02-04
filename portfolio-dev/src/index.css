@@ -9,6 +9,10 @@
     cupcake;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
     @apply bg-base-200;

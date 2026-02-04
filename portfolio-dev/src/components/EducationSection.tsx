@@ -63,7 +63,7 @@ const educationData = [
 
 const EducationSection = () => {
   return (
-    <section className="bg-base-200 py-16 px-4">
+    <section className="bg-base-200 py-16 px-4" id="education">
       <div className="mx-auto w-full max-w-6xl">
         {/* ─── SECTION HEADING ─── */}
         <div className="text-center mb-14">

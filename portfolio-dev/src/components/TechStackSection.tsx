@@ -1,83 +1,153 @@
+import {
+  Server,
+  Layout,
+  Boxes,
+  GitBranch,
+  Database,
+  Smartphone,
+} from "lucide-react";
 import TechIcon from "./TechIcon";
+import SectionHeading from "./SectionHeading";
+
+const techCategories = [
+  {
+    icon: Server,
+    title: "Backend & APIs",
+    accent: "blue",
+    skills: [
+      { iconName: "nodedotjs", techName: "Node.js" },
+      { iconName: "spring", techName: "Spring" },
+      { iconName: "springboot", techName: "Spring Boot" },
+      { iconName: "express/black/white", techName: "Express" },
+      { iconName: "typescript", techName: "TypeScript" },
+      { iconName: "socketdotio/black/white", techName: "Socket.io" },
+    ],
+  },
+  {
+    icon: Database,
+    title: "Databases & Caching",
+    accent: "blue",
+    skills: [
+      { iconName: "mysql", techName: "MySQL" },
+      { iconName: "mongodb", techName: "MongoDB" },
+      { iconName: "redis", techName: "Redis" },
+    ],
+  },
+  {
+    icon: Layout,
+    title: "Frontend & UI",
+    accent: "blue",
+    skills: [
+      { iconName: "react", techName: "React" },
+      { iconName: "vite", techName: "Vite" },
+      { iconName: "typescript", techName: "TypeScript" },
+      { iconName: "javascript", techName: "JavaScript" },
+      { iconName: "tailwindcss", techName: "Tailwind" },
+      { iconName: "daisyui", techName: "Daisy UI" },
+      { iconName: "html5", techName: "HTML5" },
+      { iconName: "css", techName: "CSS" },
+    ],
+  },
+  {
+    icon: Boxes,
+    title: "DevOps & Cloud",
+    accent: "blue",
+    skills: [
+      { iconName: "docker", techName: "Docker" },
+      { iconName: "kubernetes", techName: "Kubernetes" },
+      { iconName: "nginx", techName: "Nginx" },
+      { iconName: "digitalocean", techName: "Digital Ocean" },
+    ],
+  },
+  {
+    icon: GitBranch,
+    title: "Version Control & CI/CD",
+    accent: "blue",
+    skills: [
+      { iconName: "git", techName: "Git" },
+      { iconName: "github/black/white", techName: "GitHub" },
+      { iconName: "githubactions", techName: "GitHub Actions" },
+    ],
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile Development",
+    accent: "blue",
+    skills: [
+      { iconName: "capacitor", techName: "Capacitor" },
+      { iconName: "framework7", techName: "Framework7" },
+    ],
+  },
+];
 
 const TechStackSection = () => {
   return (
-    <section className="bg-base-200 py-12">
-      <div className="mx-auto w-full max-w-6xl px-4">
-        {/* Heading */}
-        <div className="flex flex-col text-center gap-3 mb-10">
-          <p className="text-md uppercase tracking-wide text-gray-500 font-semibold">
-            My Expertise
-          </p>
+    <section className="bg-base-200 py-16 px-4 relative overflow-hidden">
+      {/* ─── AMBIENT BACKGROUND GLOW ─── */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-            Technical <span className="text-blue-500">Skills</span>
-          </h2>
+      <div className="relative z-10 mx-auto w-full max-w-6xl">
+        <SectionHeading
+          preHeading="My Expertise"
+          heading_1="Technical"
+          heading_2="Skills"
+          subTitle="Technologies and tools I use to bring ideas to life"
+        />
 
-          <p className="text-sm sm:text-base text-gray-500 max-w-xl mx-auto">
-            Technologies and tools I use to bring ideas to life
-          </p>
+        {/* ─── TECH GRID ─── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5">
+          {techCategories.map((category, index) => {
+            const Icon = category.icon;
+
+            return (
+              <div
+                key={index}
+                className="relative group bg-base-200/50 border border-blue-500/40 backdrop-blur-sm rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-md hover:shadow-black/10"
+              >
+                {/* subtle glow per card */}
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-blue-500/6 blur-2xl rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                <div className="relative z-10 p-5">
+                  {/* ── category header ── */}
+                  <div className="flex items-center gap-3 mb-4">
+                    {/* icon shell */}
+                    <div className="size-9 rounded-xl bg-blue-500/10 border border-blue-500/25 flex items-center justify-center shrink-0">
+                      <Icon className="size-4 text-blue-400" />
+                    </div>
+
+                    {/* title */}
+                    <h3 className="text-base font-bold tracking-tight">
+                      {category.title}
+                    </h3>
+
+                    {/* skill count badge */}
+                    <span className="ml-auto text-xs text-gray-500 font-semibold bg-base-300/60 border border-white/8 px-2 py-0.5 rounded-full">
+                      {category.skills.length}
+                    </span>
+                  </div>
+
+                  {/* ── tech icons ── */}
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill) => (
+                      <TechIcon
+                        key={skill.techName}
+                        iconName={skill.iconName}
+                        techName={skill.techName}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Tech Category */}
-        <div className="flex flex-col gap-6">
-          <div className="border border-blue-500/40 rounded-xl p-4 sm:p-6">
-            <p className="font-semibold mb-3">Backend & Caching</p>
-
-            {/* Pills */}
-            <div className="flex flex-wrap gap-3">
-              <TechIcon iconName="nodedotjs" techName="Node.js" />
-              <TechIcon iconName="spring" techName="Spring" />
-              <TechIcon iconName="springboot" techName="Spring Boot" />
-              <TechIcon iconName="express/black/white" techName="Express 5" />
-              <TechIcon iconName="typescript" techName="TypeScript" />
-              <TechIcon
-                iconName="socketdotio/black/white"
-                techName="Socket.io"
-              />
-              <TechIcon iconName="redis" techName="Redis" />
-            </div>
-          </div>
-
-          <div className="border border-blue-500/40 rounded-xl p-4 sm:p-6">
-            <p className="font-semibold mb-3">Frontend</p>
-
-            {/* Pills */}
-            <div className="flex flex-wrap gap-3">
-              <TechIcon iconName="react" techName="React" />
-              <TechIcon iconName="vite" techName="Vite" />
-              <TechIcon iconName="typescript" techName="TypeScript" />
-              <TechIcon iconName="javascript" techName="JavaScript" />
-              <TechIcon iconName="tailwindcss" techName="Tailwind" />
-              <TechIcon iconName="daisyui" techName="Daisy UI" />
-              <TechIcon iconName="html5" techName="HTML" />
-              <TechIcon iconName="css" techName="CSS" />
-              {/* <TechIcon iconName="github/black/white" techName="GitHub" /> */}
-            </div>
-          </div>
-
-          <div className="border border-blue-500/40 rounded-xl p-4 sm:p-6">
-            <p className="font-semibold mb-3">DevOps & Infrastructure</p>
-
-            {/* Pills */}
-            <div className="flex flex-wrap gap-3">
-              <TechIcon iconName="docker" techName="Docker" />
-              <TechIcon iconName="kubernetes" techName="Kubernetes" />
-              <TechIcon iconName="nginx" techName="Nginx" />
-              <TechIcon iconName="digitalocean" techName="Digital Ocean" />
-            </div>
-          </div>
-
-          <div className="border border-blue-500/40 rounded-xl p-4 sm:p-6">
-            <p className="font-semibold mb-3">Version Control & CI/CD</p>
-
-            {/* Pills */}
-            <div className="flex flex-wrap gap-3">
-              <TechIcon iconName="git" techName="Git" />
-              <TechIcon iconName="github/black/white" techName="GitHub" />
-              <TechIcon iconName="githubactions" techName="GitHub Actions" />
-            </div>
-          </div>
+        {/* ─── OPTIONAL: PROFICIENCY NOTE ─── */}
+        <div className="mt-8 text-center">
+          <p className="text-xs text-gray-500 max-w-2xl mx-auto leading-relaxed">
+            Actively learning and expanding this toolkit — always exploring new
+            technologies to solve problems more effectively.
+          </p>
         </div>
       </div>
     </section>

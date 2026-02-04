@@ -2,12 +2,14 @@ import { ArrowUpRight } from "lucide-react";
 
 interface Props {
   text: string;
+  link: string;
 }
 
-const RepoButton = ({ text }: Props) => {
+const RepoButton = ({ text, link }: Props) => {
   return (
     <>
-      <button
+      <a
+        href={link}
         className="inline-flex 
               items-center 
               gap-2 
@@ -36,7 +38,7 @@ const RepoButton = ({ text }: Props) => {
         />
         {text}
         <ArrowUpRight className="size-3.5 ml-3 text-gray-500 group-hover:text-blue-400 transition-colors duration-200" />
-      </button>
+      </a>
     </>
   );
 };

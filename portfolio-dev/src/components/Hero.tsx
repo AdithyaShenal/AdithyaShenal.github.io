@@ -1,16 +1,22 @@
-import { ArrowUpRight, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import heroImage from "../assets/Profile Photo.jpeg";
 
 const Hero = () => {
   const socials = [
-    { icon: Github, label: "GitHub", href: "#" },
-    { icon: Linkedin, label: "LinkedIn", href: "#" },
-    { icon: Twitter, label: "Twitter", href: "#" },
+    { icon: Github, label: "GitHub", href: "https://github.com/AdithyaShenal" },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/adithyashenal?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BhWE8ucKMSS29K8L0o8pl1w%3D%3D",
+    },
     { icon: Mail, label: "Email", href: "mailto:washenal55@gmail.com" },
   ];
 
   return (
-    <section className="bg-base-200 min-h-screen relative overflow-hidden flex items-center">
+    <section
+      className="bg-base-200 min-h-screen relative overflow-hidden flex items-center"
+      id="hero"
+    >
       {/* ─── AMBIENT BACKGROUND GLOWS ─── */}
       <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-blue-500/7 blur-[100px] rounded-full pointer-events-none" />
       <div className="absolute -bottom-32 -right-20 w-[400px] h-[400px] bg-blue-500/5 blur-[80px] rounded-full pointer-events-none" />
@@ -110,7 +116,7 @@ const Hero = () => {
           >
             <div className="relative w-full max-w-xs sm:max-w-sm">
               {/* outer glow ring */}
-              <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-blue-500/15 via-transparent to-blue-500/5 blur-xl -z-0 scale-105" />
+              <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-blue-500/15 via-transparent to-blue-500/5 blur-xl z-0 scale-105" />
 
               {/* image frame */}
               <div className="relative z-10 group rounded-2xl overflow-hidden border border-white/10 shadow-xl shadow-black/30 bg-base-300/40">
@@ -123,35 +129,6 @@ const Hero = () => {
                 {/* bottom gradient wash */}
                 <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent pointer-events-none" />
               </div>
-
-              {/* ── floating status card ── */}
-              {/* <div className="absolute -bottom-3 -left-4 sm:-left-6 z-20">
-                <div className="flex items-center gap-2.5 bg-base-200/90 backdrop-blur-md border border-white/12 shadow-lg shadow-black/20 rounded-xl px-3.5 py-2.5">
-                  <div className="size-8 rounded-lg bg-blue-500/15 border border-blue-500/25 flex items-center justify-center">
-                    <span className="text-sm"></span>
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-gray-200 leading-tight">
-                      Software Engineer Intern
-                    </p>
-                  </div>
-                </div>
-              </div> */}
-
-              {/* ── floating experience badge ── */}
-              {/* <div className="absolute -top-2 -right-3 sm:-right-5 z-20">
-                <div className="flex items-center gap-2 bg-base-200/90 backdrop-blur-md border border-white/12 shadow-lg shadow-black/20 rounded-xl px-3 py-2">
-                  <span className="text-sm">⭐</span>
-                  <div>
-                    <p className="text-xs font-bold text-gray-200 leading-tight">
-                      20+ Projects
-                    </p>
-                    <p className="text-xs text-gray-500">
-                      Full-stack Development
-                    </p>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>

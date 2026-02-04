@@ -40,8 +40,18 @@ interface MailFormData {
 }
 
 const socialLinks = [
-  { icon: Linkedin, label: "LinkedIn", href: "#", textColor: "text-blue-600" },
-  { icon: Github, label: "GitHub", href: "#", textColor: "text-base-content" },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/adithyashenal?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BhWE8ucKMSS29K8L0o8pl1w%3D%3D",
+    textColor: "text-blue-600",
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    href: "https://github.com/AdithyaShenal",
+    textColor: "text-base-content",
+  },
   { icon: Instagram, label: "Instagram", href: "#", textColor: "text-red-700" },
 ];
 
@@ -53,6 +63,8 @@ const ContactSection = () => {
   } = useForm<MailFormData>();
 
   const submitHandler = async (data: MailFormData) => {
+    const time = new Date().toLocaleString();
+
     try {
       const result = await emailjs.send(
         "service_l5nn9a4", // SERVICE ID
@@ -61,6 +73,7 @@ const ContactSection = () => {
           senderName: data.senderName,
           email: data.senderEmail,
           text: data.text,
+          time: time,
         },
         "xJdi_Tc_dP_vV3BrA",
       );
@@ -73,7 +86,7 @@ const ContactSection = () => {
 
   return (
     <section className="bg-base-200 py-16 px-4">
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-6xl" id="contact">
         {/* ─── SECTION HEADING ─── */}
         <SectionHeading
           preHeading="Get in Touch"
@@ -84,10 +97,11 @@ const ContactSection = () => {
         />
 
         {/* ─── MAIN GRID ─── */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 ">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           {/* ════════════ LEFT COLUMN (2/5) ════════════ */}
           <div className="lg:col-span-2 flex flex-col gap-4">
             {/* ── info card ── */}
+
             <div className="relative bg-base-200/60 border border-blue-500/40 backdrop-blur-sm rounded-2xl overflow-hidden">
               <div className="relative z-10 p-5 flex flex-col gap-4">
                 {/* tiny badge */}
@@ -234,7 +248,7 @@ const ContactSection = () => {
                         required
                         className="
                             w-full bg-base-300/50 border border-white/10
-                            text-sm text-gray-200 placeholder-gray-600
+                            text-sm text-gray-200 placeholder-base-content/30
                             rounded-lg px-3.5 py-2.5
                             focus:outline-none focus:border-blue-500/40 focus:bg-base-300/70
                             transition-colors duration-200
@@ -253,7 +267,7 @@ const ContactSection = () => {
                         required
                         className="
                             w-full bg-base-300/50 border border-white/10
-                            text-sm text-gray-200 placeholder-gray-600
+                            text-sm text-gray-200 placeholder-base-content/30
                             rounded-lg px-3.5 py-2.5
                             focus:outline-none focus:border-blue-500/40 focus:bg-base-300/70
                             transition-colors duration-200
@@ -274,7 +288,7 @@ const ContactSection = () => {
                       rows={3}
                       className="
                         w-full flex-1 bg-base-300/50 border border-white/10
-                        text-sm text-base-content/80 placeholder-gray-600
+                        text-sm text-base-content/80 placeholder-base-content/30
                         rounded-lg px-3.5 py-2.5 resize-none
                         focus:outline-none focus:border-blue-500/40 focus:bg-base-300/70
                         transition-colors duration-200

@@ -2,9 +2,48 @@ import { Cog, Eye, ScrollText, ExternalLink } from "lucide-react";
 import SmallTechIcons from "./SmallTechIcons";
 import heroImage from "../assets/SE Image.jpg";
 import RepoButton from "./buttons/RepoButton";
+import { PDFViewer } from "@embedpdf/react-pdf-viewer";
+import { useEffect, useState } from "react";
 
 const Project_1 = () => {
-  const devRepos = ["Backend", "Frontend", "Driver App", "Farmer App"];
+  const [pdfData, setPdfData] = useState("");
+
+  useEffect(() => {
+    fetch("/pdfs/jayani_anuththara_intern_cv.pdf")
+      .then((res) => res.blob())
+      .then((blob) => {
+        const reader = new FileReader();
+        reader.onloadend = () => setPdfData(reader.result as string);
+        reader.readAsDataURL(blob);
+      });
+  }, []);
+
+  const openPdf = () => {
+    window.open(
+      "/pdfs/jayani_anuththara_intern_cv.pdf",
+      "_blank",
+      "noreferrer",
+    );
+  };
+
+  const devRepos = [
+    {
+      name: "Backend",
+      link: "https://github.com/AdithyaShenal/milkflow-backend",
+    },
+    {
+      name: "Frontend",
+      link: "https://github.com/AdithyaShenal/milkflow-admin-web",
+    },
+    {
+      name: "Driver App",
+      link: "https://github.com/AdithyaShenal/milkflow-driver-android",
+    },
+    {
+      name: "Farmer App",
+      link: "https://github.com/AdithyaShenal/milkflow-farmer-android",
+    },
+  ];
 
   const techStack = [
     { icon: "springboot", name: "Spring Boot" },
@@ -30,6 +69,10 @@ const Project_1 = () => {
 
   return (
     <div className="relative">
+      <button onClick={openPdf} className="btn btn-primary">
+        View Full CV
+      </button>
+
       {/* ─── TOP BADGE ROW ─── */}
       <div className="flex flex-wrap items-center gap-2 mb-5">
         <span className="inline-flex items-center gap-1.5 bg-blue-500/10 border border-blue-500/25 text-blue-400 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
@@ -87,7 +130,6 @@ const Project_1 = () => {
                 farmers, drivers, and processors in real time.
               </p>
             </div>
-
             {/* live URL */}
             <a
               href="http://milkflow.adithyashenal.me"
@@ -98,7 +140,6 @@ const Project_1 = () => {
               <ExternalLink className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               www.milkflow.adithyashenal.me
             </a>
-
             {/* action buttons row */}
             <div className="flex flex-wrap gap-2.5">
               <button className="inline-flex items-center gap-2 border border-blue-500/40 text-blue-400 hover:bg-blue-500/10 text-xs font-semibold px-4 py-2 rounded-full transition-colors duration-200">
@@ -112,8 +153,10 @@ const Project_1 = () => {
             </div>
 
             {/* production repo pill */}
-            <RepoButton text={"Production Repository · Deployed"} />
-
+            <RepoButton
+              text={"Production Repository · Deployed"}
+              link="https://github.com/AdithyaShenal/milk-flow-production"
+            />
             {/* ─── TECH STACK ─── */}
             <div>
               <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2.5">
@@ -140,7 +183,7 @@ const Project_1 = () => {
         </p>
         <div className="flex flex-wrap gap-2">
           {devRepos.map((item) => (
-            <RepoButton text={item} key={item} />
+            <RepoButton text={item.name} key={item.name} link={item.link} />
           ))}
         </div>
       </div>
@@ -159,6 +202,28 @@ const Project_1 = () => {
           pariatur soluta magni consequatur in magnam excepturi velit.
         </p>
       </div>
+
+      <div className="h-[600px] w-full overflow-hidden rounded-xl border border-gray-300 shadow-lg dark:border-gray-600">
+        <PDFViewer
+          config={{
+            // src: "https://snippet.embedpdf.com/ebook.pdf",
+            // src: "./public/pdfs/jayani_anuththara_intern_cv.pdf",
+            // src: "../../public/pdfs/jayani_anuththara_intern_cv.pdf",
+            // src: "../assets/pdfs/jayani_anuththara_intern_cv.pdf",
+            src: "/pdfs/jayani_anuththara_intern_cv.pdf",
+            theme: { preference: "dark" },
+          }}
+          style={{ width: "100%", height: "100%" }}
+        />
+      </div>
+
+      <PDFViewer
+        config={{
+          src: pdfData, // Uses the Base64 string instead of a URL
+          theme: { preference: "dark" },
+        }}
+        style={{ width: "100%", height: "100%" }}
+      />
     </div>
   );
 };

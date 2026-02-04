@@ -1,7 +1,7 @@
 import Project_1 from "./Project_1";
 
 const ProjectsSection = () => (
-  <section className="bg-base-200 py-16 px-4">
+  <section className="bg-base-200 py-16 px-4" id="projects">
     <div className="mx-auto w-full max-w-6xl">
       {/* ─── SECTION HEADING ─── */}
       <div className="text-center mb-14">
