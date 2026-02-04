@@ -1,4 +1,6 @@
+import ContactSection from "./components/ContactSection";
 import EducationSection from "./components/EducationSection";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import ProjectsSection from "./components/ProjectsSection";
@@ -22,6 +24,12 @@ function App() {
       <section>
         <EducationSection />
       </section>
+      <section>
+        <ContactSection />
+      </section>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

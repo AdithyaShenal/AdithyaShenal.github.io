@@ -5,7 +5,7 @@ const ProjectsSection = () => (
     <div className="mx-auto w-full max-w-6xl">
       {/* ─── SECTION HEADING ─── */}
       <div className="text-center mb-14">
-        <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">
+        <p className="text-xs uppercase tracking-widest text-base-content/80 font-semibold mb-2">
           Featured Work
         </p>
 
@@ -13,7 +13,7 @@ const ProjectsSection = () => (
           My <span className="text-blue-500">Projects</span>
         </h2>
 
-        <p className="text-sm text-gray-500 max-w-lg mx-auto mt-3 leading-relaxed">
+        <p className="text-sm text-base-content/80 max-w-lg mx-auto mt-3 leading-relaxed">
           A collection of my most impactful projects, showcasing full-stack
           development, system architecture, and modern design principles.
         </p>

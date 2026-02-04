@@ -13,7 +13,7 @@ const SmallTechIcons = ({ iconName, techName }: Props) => {
           src={`https://cdn.simpleicons.org/${iconName}`}
           alt={iconName}
         />
-        <span className="text-white text-xs font-medium">{techName}</span>
+        <span className="text-xs font-medium">{techName}</span>
       </span>
     </>
   );

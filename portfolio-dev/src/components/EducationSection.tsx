@@ -6,7 +6,7 @@ const educationData = [
     phase: "G.C.E A/L",
     icon: BookOpen,
     institution: "G.C.E Advanced Level (A/L)",
-    degree: "Advanced Level",
+    degree: "Physical Science Stream",
     stream: "Physical Science Stream",
     location: "Gampaha, Sri Lanka",
     highlight: "Z-Score: 1.3905",
@@ -67,14 +67,16 @@ const EducationSection = () => {
       <div className="mx-auto w-full max-w-6xl">
         {/* ─── SECTION HEADING ─── */}
         <div className="text-center mb-14">
-          <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">
+          <p className="text-xs uppercase tracking-widest text-base-content/80 font-semibold mb-2">
             My Journey
           </p>
+
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             Education &amp;{" "}
             <span className="text-blue-500">Certifications</span>
           </h2>
-          <p className="text-sm text-gray-500 max-w-lg mx-auto mt-3 leading-relaxed">
+
+          <p className="text-sm text-base-content/80 max-w-lg mx-auto mt-3 leading-relaxed">
             Academic background and professional development milestones
           </p>
         </div>
@@ -82,7 +84,12 @@ const EducationSection = () => {
         {/* ─── TIMELINE ─── */}
         <div className="relative">
           {/* vertical line */}
-          <div className="absolute left-5 sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/12 to-transparent -translate-x-1/2" />
+
+          {/* For White */}
+          <div className="absolute left-5 sm:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-white/12 to-transparent -translate-x-1/2" />
+
+          {/* For Dark */}
+          <div className="absolute left-5 sm:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-black/20 to-transparent -translate-x-1/2" />
 
           <div className="flex flex-col gap-8">
             {educationData.map((edu, index) => {
@@ -94,7 +101,7 @@ const EducationSection = () => {
                   {/* ─── DOT + ERA (center node) ─── */}
                   <div className="absolute left-5 sm:left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
                     {/* era label — sits above the dot on desktop */}
-                    <span className="hidden sm:block text-xs text-gray-500 font-semibold tracking-wide whitespace-nowrap mb-2">
+                    <span className="hidden sm:block text-xs text-base-content font-semibold tracking-wide whitespace-nowrap mb-2">
                       {edu.era}
                     </span>
 
@@ -116,14 +123,9 @@ const EducationSection = () => {
                       className={`
                         relative group bg-base-200/60 border ${edu.borderColor} backdrop-blur-sm
                         rounded-xl overflow-hidden transition-all duration-300
-                        hover:border-white/20 hover:shadow-lg hover:shadow-black/20
+                        hover:border-white/20 hover:shadow-md hover:shadow-black/20
                       `}
                     >
-                      {/* ambient glow inside card */}
-                      <div
-                        className={`absolute -top-10 ${isRight ? "-right-10" : "-left-10"} w-40 h-40 ${edu.glowColor} blur-3xl rounded-full pointer-events-none`}
-                      />
-
                       <div className="relative z-10 p-5">
                         {/* ─── top row: phase badge + era (mobile) ─── */}
                         <div className="flex flex-wrap items-center gap-2 mb-3">
@@ -138,7 +140,7 @@ const EducationSection = () => {
                           </span>
 
                           {/* era on mobile only */}
-                          <span className="sm:hidden text-xs text-gray-500 font-semibold tracking-wide">
+                          <span className="sm:hidden text-xs text-base-content font-semibold tracking-wide">
                             {edu.era}
                           </span>
                         </div>
@@ -148,16 +150,13 @@ const EducationSection = () => {
                           {edu.institution}
                         </h4>
                         <p
-                          className={`text-sm font-semibold mt-0.5 ${edu.accent}`}
+                          className={`text-md font-semibold mt-0.5 ${edu.accent}`}
                         >
                           {edu.degree}
                         </p>
-                        <p className="text-xs text-gray-500 mt-0.5">
-                          {edu.stream} · {edu.location}
-                        </p>
 
                         {/* ─── highlight line ─── */}
-                        <p className="text-xs text-gray-400 mt-2.5 leading-relaxed border-l-2 border-white/10 pl-2.5">
+                        <p className="text-sm text-base-content mt-2.5 leading-relaxed border-l-2 border-gray-500/50 pl-2.5">
                           {edu.highlight}
                         </p>
 
@@ -166,7 +165,7 @@ const EducationSection = () => {
                           {edu.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="bg-base-300/60 border border-white/8 text-gray-400 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                              className="bg-base-300/60 border border-gray-500/50 text-base-content/70 text-xs font-medium px-2.5 py-0.5 rounded-full"
                             >
                               {tag}
                             </span>

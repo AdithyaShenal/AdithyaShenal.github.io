@@ -1,34 +1,178 @@
-import heroImage from "../assets/SE Image.jpg";
+import { ArrowUpRight, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import heroImage from "../assets/Profile Photo.jpeg";
 
 const Hero = () => {
-  return (
-    <>
-      <div className="hero bg-base-200 min-h-screen">
-        <div className="hero-content flex-col lg:flex-row-reverse w-full">
-          {/* Image column */}
-          <div className="w-full lg:w-3/5 flex justify-center">
-            <img
-              src={heroImage}
-              className="w-full  rounded-lg shadow-2xl h-120"
-            />
-          </div>
+  const socials = [
+    { icon: Github, label: "GitHub", href: "#" },
+    { icon: Linkedin, label: "LinkedIn", href: "#" },
+    { icon: Twitter, label: "Twitter", href: "#" },
+    { icon: Mail, label: "Email", href: "mailto:washenal55@gmail.com" },
+  ];
 
-          {/* Text column */}
-          <div className="w-full lg:w-2/5">
-            <h1 className="text-5xl font-bold">Software Engineer Intern</h1>
-            <p className="py-6">
+  return (
+    <section className="bg-base-200 min-h-screen relative overflow-hidden flex items-center">
+      {/* ─── AMBIENT BACKGROUND GLOWS ─── */}
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-blue-500/7 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute -bottom-32 -right-20 w-[400px] h-[400px] bg-blue-500/5 blur-[80px] rounded-full pointer-events-none" />
+      {/* subtle grid pattern overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-24 sm:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-center">
+          {/* ════════════ LEFT – TEXT (3 / 5) ════════════ */}
+          <div className="lg:col-span-3 flex flex-col gap-5">
+            {/* ── availability badge ── */}
+
+            {/* ── name + role ── */}
+            <div style={{ animation: "fadeInUp 0.7s ease 0.1s both" }}>
+              <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1.5">
+                Hi, I'm
+              </p>
+              <h1 className="text-3xl sm:text-3xl lg:text-3xl font-bold tracking-tighter leading-tight">
+                Adithya Shenal
+              </h1>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight">
+                <span className="text-blue-500">Software Engineer</span>
+                <span className="text-gray-600"> Intern</span>
+              </h2>
+            </div>
+
+            {/* ── bio ── */}
+            <p
+              className="text-sm text-base-content leading-relaxed max-w-md"
+              style={{ animation: "fadeInUp 0.7s ease 0.25s both" }}
+            >
               Building scalable web applications with modern technologies.
               Passionate about clean code, system architecture, and creating
               exceptional user experiences.
             </p>
-            <div className="flex gap-2">
-              <button className="btn btn-primary">View Projects</button>
-              <button className="btn btn-primary">Contact Me</button>
+
+            {/* ── CTA buttons ── */}
+            <div
+              className="flex flex-wrap items-center gap-3 mt-1"
+              style={{ animation: "fadeInUp 0.7s ease 0.45s both" }}
+            >
+              <a
+                href="#projects"
+                className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-400 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-md shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-200 hover:-translate-y-0.5"
+              >
+                View Projects
+                <ArrowUpRight className="size-4" />
+              </a>
+
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 bg-base-300 border border-white/12 hover:border-white/25 text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 hover:-translate-y-0.5"
+              >
+                Contact Me
+              </a>
+            </div>
+
+            {/* ── social row ── */}
+            <div
+              className="flex items-center gap-3 mt-2"
+              style={{ animation: "fadeInUp 0.7s ease 0.55s both" }}
+            >
+              {socials.map((s) => {
+                const Icon = s.icon;
+                return (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    aria-label={s.label}
+                    className="size-9 rounded-full bg-base-300/50 border border-white/10 hover:border-blue-500/35 hover:bg-blue-500/10 flex items-center justify-center text-gray-400 hover:text-blue-400 transition-all duration-200 hover:-translate-y-0.5"
+                  >
+                    <Icon className="size-4" />
+                  </a>
+                );
+              })}
+
+              {/* divider dot */}
+              <span className="size-1 rounded-full bg-white/15 mx-1" />
+
+              <span className="text-xs text-gray-600 font-medium">
+                Sri Lanka
+              </span>
+            </div>
+          </div>
+
+          {/* ════════════ RIGHT – IMAGE (2 / 5) ════════════ */}
+          <div
+            className="lg:col-span-2 flex justify-center lg:justify-end"
+            style={{ animation: "fadeInRight 0.8s ease 0.2s both" }}
+          >
+            <div className="relative w-full max-w-xs sm:max-w-sm">
+              {/* outer glow ring */}
+              <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-blue-500/15 via-transparent to-blue-500/5 blur-xl -z-0 scale-105" />
+
+              {/* image frame */}
+              <div className="relative z-10 group rounded-2xl overflow-hidden border border-white/10 shadow-xl shadow-black/30 bg-base-300/40">
+                <img
+                  src={heroImage}
+                  alt="Adithya Shenal"
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={{ aspectRatio: "3/4" }}
+                />
+                {/* bottom gradient wash */}
+                <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent pointer-events-none" />
+              </div>
+
+              {/* ── floating status card ── */}
+              {/* <div className="absolute -bottom-3 -left-4 sm:-left-6 z-20">
+                <div className="flex items-center gap-2.5 bg-base-200/90 backdrop-blur-md border border-white/12 shadow-lg shadow-black/20 rounded-xl px-3.5 py-2.5">
+                  <div className="size-8 rounded-lg bg-blue-500/15 border border-blue-500/25 flex items-center justify-center">
+                    <span className="text-sm"></span>
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-gray-200 leading-tight">
+                      Software Engineer Intern
+                    </p>
+                  </div>
+                </div>
+              </div> */}
+
+              {/* ── floating experience badge ── */}
+              {/* <div className="absolute -top-2 -right-3 sm:-right-5 z-20">
+                <div className="flex items-center gap-2 bg-base-200/90 backdrop-blur-md border border-white/12 shadow-lg shadow-black/20 rounded-xl px-3 py-2">
+                  <span className="text-sm">⭐</span>
+                  <div>
+                    <p className="text-xs font-bold text-gray-200 leading-tight">
+                      20+ Projects
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      Full-stack Development
+                    </p>
+                  </div>
+                </div>
+              </div> */}
             </div>
           </div>
         </div>
       </div>
-    </>
+
+      {/* ─── KEYFRAMES ─── */}
+      <style>{`
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(18px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-12px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInRight {
+          from { opacity: 0; transform: translateX(24px); }
+          to   { opacity: 1; transform: translateX(0); }
+        }
+      `}</style>
+    </section>
   );
 };
 
