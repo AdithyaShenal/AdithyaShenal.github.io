@@ -5,12 +5,12 @@ import RepoButton from "./buttons/RepoButton";
 import { Link } from "react-router-dom";
 
 const Project_1 = () => {
-  // const cvLink =
-  //   "https://rawcdn.githack.com/AdithyaShenal/AdithyaShenal.github.io/b7fe6d816cc9470e9f61b7551c58f375d92c335e/jayani_anuththara_intern_cv.pdf";
+  const cvLink =
+    "https://rawcdn.githack.com/AdithyaShenal/AdithyaShenal.github.io/312dd2f64254988bfa3be94b05ab298c3a812dc9/System%20Architecture.pdf";
 
-  // const handleViewCV = () => {
-  //   window.open(cvLink, "_blank", "noopener,noreferrer");
-  // };
+  const handleViewCV = () => {
+    window.open(cvLink, "_blank", "noopener,noreferrer");
+  };
 
   const devRepos = [
     {
@@ -128,10 +128,21 @@ const Project_1 = () => {
                 <ScrollText size={14} />
                 Documentation
               </button>
-              <button className="inline-flex items-center gap-2 bg-blue-500/15 border border-blue-500/30 text-blue-400 hover:bg-blue-500/25 text-xs font-semibold px-4 py-2 rounded-full transition-colors duration-200">
+              <Link
+                to="projectOneArch"
+                className="inline-flex items-center gap-2 bg-blue-500/15 border border-blue-500/30 text-blue-400 hover:bg-blue-500/25 text-xs font-semibold px-4 py-2 rounded-full transition-colors duration-200"
+              >
                 <Cog size={14} />
-                <Link to="projectOneArch">System Architecture</Link>
-              </button>
+                System Architecture
+              </Link>
+
+              <div
+                onClick={handleViewCV}
+                className="inline-flex items-center gap-2 bg-blue-500/15 border border-blue-500/30 text-blue-400 hover:bg-blue-500/25 text-xs font-semibold px-4 py-2 rounded-full transition-colors duration-200"
+              >
+                <Cog size={14} />
+                System Architecture
+              </div>
             </div>
 
             {/* production repo pill */}

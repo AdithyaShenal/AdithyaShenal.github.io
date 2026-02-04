@@ -8,7 +8,13 @@ const ProjectOneArch = () => {
           config={{
             src: "https://rawcdn.githack.com/AdithyaShenal/AdithyaShenal.github.io/312dd2f64254988bfa3be94b05ab298c3a812dc9/System%20Architecture.pdf",
             theme: { preference: "dark" },
-            disabledCategories: ["annotations"],
+            disabledCategories: [
+              "annotation",
+              "print",
+              "export",
+              "redaction",
+              "panel",
+            ],
           }}
           style={{ width: "100%", height: "100%" }}
         />
