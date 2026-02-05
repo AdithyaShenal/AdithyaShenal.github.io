@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <section
-      className="bg-base-200 min-h-screen relative overflow-hidden flex items-center"
+      className="bg-base-200 relative overflow-hidden flex items-center"
       id="hero"
     >
       {/* ─── AMBIENT BACKGROUND GLOWS ─── */}
@@ -38,7 +38,7 @@ const Hero = () => {
 
             {/* ── name + role ── */}
             <div style={{ animation: "fadeInUp 0.7s ease 0.1s both" }}>
-              <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1.5">
+              <p className="text-sm uppercase tracking-widest text-gray-500 font-semibold mb-1.5">
                 Hi, I'm
               </p>
               <h1 className="text-3xl sm:text-3xl lg:text-3xl font-bold tracking-tighter leading-tight">
@@ -46,7 +46,7 @@ const Hero = () => {
               </h1>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight">
                 <span className="text-blue-500">Software Engineer</span>
-                <span className="text-gray-600"> Intern</span>
+                {/* <span className="text-gray-600"> Intern</span> */}
               </h2>
             </div>
 
@@ -55,9 +55,10 @@ const Hero = () => {
               className="text-sm text-base-content leading-relaxed max-w-md"
               style={{ animation: "fadeInUp 0.7s ease 0.25s both" }}
             >
-              Building scalable web applications with modern technologies.
-              Passionate about clean code, system architecture, and creating
-              exceptional user experiences.
+              Software engineer with interests spanning full-stack development,
+              distributed systems, and infrastructure. Focused on clean system
+              design, reliability, and turning complex problems into
+              maintainable software solutions.
             </p>
 
             {/* ── CTA buttons ── */}
@@ -67,7 +68,24 @@ const Hero = () => {
             >
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-400 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-md shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-200 hover:-translate-y-0.5"
+                className="
+                  inline-flex 
+                  items-center 
+                  gap-2 
+                  bg-blue-500 
+                  hover:bg-blue-400 
+                  text-white 
+                  text-sm 
+                  font-semibold 
+                  px-5 
+                  py-2.5 
+                  rounded-full 
+                  shadow-md 
+                  shadow-blue-500/25 
+                  hover:shadow-blue-500/40 
+                  transition-all 
+                  duration-200 
+                  hover:-translate-y-0.5"
               >
                 View Projects
                 <ArrowUpRight className="size-4" />
@@ -75,7 +93,22 @@ const Hero = () => {
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 bg-base-300 border border-white/12 hover:border-white/25 text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 hover:-translate-y-0.5"
+                className="
+                  inline-flex 
+                  items-center 
+                  gap-2 
+                  bg-base-300 
+                  border 
+                  border-white/12 
+                  hover:border-white/25 
+                  text-sm 
+                  font-semibold 
+                  px-5 
+                  py-2.5 
+                  rounded-full 
+                  transition-all 
+                  duration-200 
+                  hover:-translate-y-0.5"
               >
                 Contact Me
               </a>
@@ -103,7 +136,7 @@ const Hero = () => {
               {/* divider dot */}
               <span className="size-1 rounded-full bg-white/15 mx-1" />
 
-              <span className="text-xs text-gray-600 font-medium">
+              <span className="text-sm text-gray-600 font-medium">
                 Sri Lanka
               </span>
             </div>
@@ -114,7 +147,7 @@ const Hero = () => {
             className="lg:col-span-2 flex justify-center lg:justify-end"
             style={{ animation: "fadeInRight 0.8s ease 0.2s both" }}
           >
-            <div className="relative w-full max-w-xs sm:max-w-sm">
+            <div className="relative w-full max-w-xs">
               {/* outer glow ring */}
               <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-blue-500/15 via-transparent to-blue-500/5 blur-xl z-0 scale-105" />
 
@@ -123,7 +156,7 @@ const Hero = () => {
                 <img
                   src={heroImage}
                   alt="Adithya Shenal"
-                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="max-w-xs object-cover transition-transform duration-500 group-hover:scale-105"
                   style={{ aspectRatio: "3/4" }}
                 />
                 {/* bottom gradient wash */}

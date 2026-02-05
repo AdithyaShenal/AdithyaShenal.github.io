@@ -23,11 +23,10 @@ const RepoButton = ({ text, link }: Props) => {
               py-2 
               rounded-full 
               w-fit 
-              transition-colors 
-              duration-300
               group
               text-base-content/70
               hover:text-base-content
+              hover:bg-white/20 transition-all duration-200 hover:-translate-y-0.5
               "
       >
         <img
@@ -37,7 +36,7 @@ const RepoButton = ({ text, link }: Props) => {
           alt="GitHub"
         />
         {text}
-        <ArrowUpRight className="size-3.5 ml-3 text-gray-500 group-hover:text-blue-400 transition-colors duration-200" />
+        <ArrowUpRight className="size-3.5 ml-2 text-gray-500 group-hover:text-blue-400 transition-colors duration-200" />
       </a>
     </>
   );
