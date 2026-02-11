@@ -6,7 +6,7 @@ const ProjectOneArch = () => {
       <div className="h-screen w-full overflow-hidden rounded-xl border border-gray-300 shadow-lg dark:border-gray-600">
         <PDFViewer
           config={{
-            src: "https://rawcdn.githack.com/AdithyaShenal/AdithyaShenal.github.io/312dd2f64254988bfa3be94b05ab298c3a812dc9/System%20Architecture.pdf",
+            src: "https://rawcdn.githack.com/AdithyaShenal/AdithyaShenal.github.io/17279db5fae4688abdbadbea148bd86ee56afc2b/Milkflow%20-%20System%20Architecture.pdf",
             theme: { preference: "dark" },
             disabledCategories: [
               "annotation",
@@ -24,3 +24,4 @@ const ProjectOneArch = () => {
 };
 
 export default ProjectOneArch;
+// https://rawcdn.githack.com/AdithyaShenal/AdithyaShenal.github.io/17279db5fae4688abdbadbea148bd86ee56afc2b/Milkflow%20-%20Software%20Requirements%20Specification.pdf
