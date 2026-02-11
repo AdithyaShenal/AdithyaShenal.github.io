@@ -1,7 +1,6 @@
-import { Cog, ScrollText, MoveUp } from "lucide-react";
+import { MoveUp } from "lucide-react";
 import SmallTechIcons from "./SmallTechIcons";
 import RepoButton from "./buttons/RepoButton";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import heroImage from "../assets/lumina_bg.png";
 
@@ -96,7 +95,7 @@ const Project_3 = () => {
               www.lumina.adithyashenal.me
             </a> */}
             {/* action buttons row */}
-            <div className="flex flex-wrap gap-2.5">
+            {/* <div className="flex flex-wrap gap-2.5">
               <button className="inline-flex items-center gap-2 border border-blue-500/40 text-blue-400 hover:bg-blue-500/10 text-xs font-semibold px-4 py-2 rounded-full transition-colors duration-200">
                 <ScrollText size={14} />
                 Documentation
@@ -108,7 +107,7 @@ const Project_3 = () => {
                 <Cog size={14} />
                 System Architecture
               </Link>
-            </div>
+            </div> */}
 
             {/* production repo pill */}
             <RepoButton
