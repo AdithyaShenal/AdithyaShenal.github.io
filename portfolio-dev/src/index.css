@@ -15,11 +15,7 @@ html {
 }
 
 @layer utilities {
-  /* .font-quicksand {
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-  } */
-  .font-inter {
+  .font-quicksand {
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
   }
@@ -28,11 +24,9 @@ html {
 @layer base {
   body {
     @apply bg-base-200;
-    font-family: "Quicksand", sans-serif;
-
+    font-family: "Inter", sans-serif;
     /* font-family: "JetBrains Mono", monospace; */
     font-optical-sizing: auto;
-    /* font-family: "Quicksand", sans-serif; */
   }
 
   h1 {
@@ -62,9 +56,10 @@ html {
   color-scheme: light;
 
   --color-base-100: oklch(98.5% 0.004 245);
+
   --color-base-200: oklch(98.6% 0.006 80);
-  --color-base-300: oklch(93.8% 0.01 80)
-    --color-base-content: oklch(20% 0.015 240); /* primary text */
+  --color-base-300: oklch(93.8% 0.01 80);
+  --color-base-content: oklch(20% 0.015 240);
 
   --color-primary: oklch(52% 0.22 250);
   --color-primary-content: oklch(98% 0.01 250);

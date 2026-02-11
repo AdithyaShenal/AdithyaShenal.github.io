@@ -15,19 +15,18 @@ const Footer = () => {
           </div>
         </aside>
 
-        <div>
+        <div className="animate-bounce">
           <a
             href="#hero"
             className="text-blue-500 
                         cursor-pointer 
                         font-bold 
-                        animate-pulse 
                         mt-2.5
                         flex gap-2 items-center
                         "
           >
             <MoveUp className="size-3" />{" "}
-            <p className="hover:scale-105 transition-transform duration-300">
+            <p className="hover:scale-105 transition-transform duration-400">
               Back to Top
             </p>
           </a>
