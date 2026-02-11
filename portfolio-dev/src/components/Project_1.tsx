@@ -71,9 +71,9 @@ const Project_1 = () => {
       </div>
 
       {/* ─── MAIN CARD ─── */}
-      <div className="relative bg-base-200/50 border border-blue-500/40 backdrop-blur-sm rounded-2xl overflow-hidden">
+      <div className="relative bg-base-200/50 border border-blue-500/40 rounded-2xl overflow-hidden">
         {/* subtle ambient glow behind image */}
-        <div className="absolute -top-20 -left-20 w-80 h-80 bg-blue-500/8 blur-3xl rounded-full pointer-events-none" />
+        <div className="absolute -top-20 -left-20 w-80 h-80 bg-blue-500/8 rounded-full pointer-events-none" />
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-0">
           {/* ─── LEFT COLUMN – IMAGE (2/5) ─── */}
@@ -85,7 +85,7 @@ const Project_1 = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {/* dark gradient overlay at bottom */}
-              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/20 via-black/5 to-transparent" />
 
               {/* floating action pills */}
               <div className="absolute bottom-4 left-4 flex gap-2 z-10">
@@ -96,12 +96,6 @@ const Project_1 = () => {
                   <Eye className="size-3.5" />
                   Live Demo
                 </a>
-                <button className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur border border-white/25 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full hover:bg-white/20 transition-all duration-200 hover:-translate-y-0.5">
-                  Driver App
-                </button>
-                <button className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur border border-white/25 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full hover:bg-white/20 transition-all duration-200 hover:-translate-y-0.5">
-                  Farmer App
-                </button>
               </div>
             </div>
           </div>
@@ -129,6 +123,7 @@ const Project_1 = () => {
               <ExternalLink className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               www.milkflow.adithyashenal.me
             </a>
+
             {/* action buttons row */}
             <div className="flex flex-wrap gap-2.5">
               <button className="inline-flex items-center gap-2 border border-blue-500/40 text-blue-400 hover:bg-blue-500/10 text-xs font-semibold px-4 py-2 rounded-full transition-colors duration-200">
@@ -200,7 +195,7 @@ const Project_1 = () => {
               and unreliable.
             </p>
           </div>
-          <div className="mt-4">
+          <div className="mt-4 transition-all">
             <p className="text-sm uppercase tracking-widest text-blue-500/80 font-semibold whitespace-nowrap mb-2.5">
               What I have Architected & Developed Here
             </p>
@@ -212,7 +207,7 @@ const Project_1 = () => {
                 {!readMore && (
                   <button
                     onClick={() => setReadMore(true)}
-                    className="text-lg text-blue-500 cursor-pointer font-bold animate-pulse"
+                    className="text-lg text-blue-500 cursor-pointer font-bold animate-pulse hover:animate-none"
                   >
                     Read more...
                   </button>
@@ -255,6 +250,19 @@ const Project_1 = () => {
                     pipelines via GitHub Actions, ensuring scalability,
                     reliability, and easy maintenance.
                   </p>
+
+                  <p className="text-base-content/50">
+                    Android Application APKs - Google Drive Links
+                  </p>
+                  <a
+                    href="http://milkflow.adithyashenal.me"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors w-fit group"
+                  >
+                    <ExternalLink className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    https://drive.google.com/drive/folders/1MHDMqMoZ-yUtba8vVB5KJJG9Pbi-AwPr
+                  </a>
                   {readMore && (
                     <button
                       onClick={() => setReadMore(false)}
@@ -264,6 +272,7 @@ const Project_1 = () => {
                         animate-pulse 
                         mt-2.5
                         flex gap-2 items-center
+                        hover:animate-none
                         "
                     >
                       <MoveUp className="size-3" /> <p>Collapse content</p>

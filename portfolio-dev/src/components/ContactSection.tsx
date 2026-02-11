@@ -102,7 +102,7 @@ const ContactSection = () => {
           <div className="lg:col-span-2 flex flex-col gap-4">
             {/* ── info card ── */}
 
-            <div className="relative bg-base-200/60 border border-blue-500/40 backdrop-blur-sm rounded-2xl overflow-hidden">
+            <div className="relative bg-base-200/60 border border-blue-500/40 rounded-2xl overflow-hidden">
               <div className="relative z-10 p-5 flex flex-col gap-4">
                 {/* tiny badge */}
                 <span className="inline-flex items-center gap-1.5 bg-blue-500/10 border border-blue-500/25 text-blue-400 text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full w-fit mb-3">
@@ -163,7 +163,7 @@ const ContactSection = () => {
             </div>
 
             {/* ── social pills ── */}
-            <div className="bg-base-200/40 border border-blue-500/40 backdrop-blur-sm rounded-xl p-4">
+            <div className="bg-base-200/40 border border-blue-500/40 rounded-xl p-4">
               <span className="inline-flex items-center gap-1.5 bg-blue-500/10 border border-blue-500/25 text-blue-400 text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full w-fit mb-3">
                 <span className="size-1.5 rounded-full bg-blue-400 animate-pulse" />
                 Follow me
@@ -203,7 +203,7 @@ const ContactSection = () => {
 
           {/* ════════════ RIGHT COLUMN – FORM (3/5) ════════════ */}
           <div className="lg:col-span-3">
-            <div className="relative bg-base-200/60 border border-blue-500/40 backdrop-blur-sm rounded-2xl overflow-hidden h-full">
+            <div className="relative bg-base-200/60 border border-blue-500/40 rounded-2xl overflow-hidden h-full">
               <div className="relative z-10 p-5 sm:p-7 flex flex-col gap-5 h-full">
                 <div>
                   <h3 className="text-base text-base-content/80 font-bold tracking-tight">

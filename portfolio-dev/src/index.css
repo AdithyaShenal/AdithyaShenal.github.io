@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @import "tailwindcss";
 @plugin "daisyui" {
@@ -13,10 +14,23 @@ html {
   scroll-behavior: smooth;
 }
 
+@layer utilities {
+  /* .font-quicksand {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+  } */
+  .font-inter {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+  }
+}
+
 @layer base {
   body {
     @apply bg-base-200;
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Quicksand", sans-serif;
+
+    /* font-family: "JetBrains Mono", monospace; */
     font-optical-sizing: auto;
     /* font-family: "Quicksand", sans-serif; */
   }
@@ -47,10 +61,10 @@ html {
   prefersdark: false;
   color-scheme: light;
 
-  --color-base-100: oklch(98.5% 0.004 245); /* page background */
-  --color-base-200: oklch(96.5% 0.012 240); /* sections */
-  --color-base-300: oklch(92% 0.018 240); /* cards / borders */
-  --color-base-content: oklch(20% 0.015 240); /* primary text */
+  --color-base-100: oklch(98.5% 0.004 245);
+  --color-base-200: oklch(98.6% 0.006 80);
+  --color-base-300: oklch(93.8% 0.01 80)
+    --color-base-content: oklch(20% 0.015 240); /* primary text */
 
   --color-primary: oklch(52% 0.22 250);
   --color-primary-content: oklch(98% 0.01 250);

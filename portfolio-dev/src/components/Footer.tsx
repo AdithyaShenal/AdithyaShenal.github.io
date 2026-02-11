@@ -4,16 +4,15 @@ import SmallTechIcons from "./SmallTechIcons";
 const Footer = () => {
   return (
     <>
-      <footer className="footer sm:footer-horizontal bg-base-100 text-neutral-content p-10">
-        <aside>
-          <p>
-            This webiste developed using
-            <br />
+      <footer className="footer sm:footer-horizontal bg-base-100 text-base-content p-10 border-t border-black/10">
+        <aside className="flex flex-col">
+          <p className="ml-3 font-semibold">This webiste developed using</p>
+          <div>
             <SmallTechIcons iconName="react" techName="React 19" />
             <SmallTechIcons iconName="daisyui" techName="Daisy UI" />
             <SmallTechIcons iconName="vite" techName="Vite" />
             <SmallTechIcons iconName="github/black/white" techName="GitHub" />
-          </p>
+          </div>
         </aside>
 
         <div>

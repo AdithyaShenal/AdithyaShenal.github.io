@@ -52,7 +52,7 @@ const Hero = () => {
 
             {/* ── bio ── */}
             <p
-              className="text-sm text-base-content leading-relaxed max-w-md"
+              className="text-lg text-base-content leading-relaxed max-w-md font-inter"
               style={{ animation: "fadeInUp 0.7s ease 0.25s both" }}
             >
               Software engineer with interests spanning full-stack development,

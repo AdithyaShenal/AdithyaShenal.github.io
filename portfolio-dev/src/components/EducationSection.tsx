@@ -121,7 +121,7 @@ const EducationSection = () => {
                   >
                     <div
                       className={`
-                        relative group bg-base-200/60 border ${edu.borderColor} backdrop-blur-sm
+                        relative group bg-base-200/60 border ${edu.borderColor}
                         rounded-xl overflow-hidden transition-all duration-300
                         hover:border-white/20 hover:shadow-md hover:shadow-black/20
                       `}

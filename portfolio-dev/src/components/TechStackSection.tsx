@@ -84,9 +84,8 @@ const TechStackSection = () => {
   return (
     <section className="bg-base-200 py-16 px-4 relative overflow-hidden">
       {/* ─── AMBIENT BACKGROUND GLOW ─── */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl">
+      <div className="relative z-10 mx-auto w-full max-w-6xl font-inter">
         <SectionHeading
           preHeading="My Expertise"
           heading_1="Technical"
@@ -102,10 +101,9 @@ const TechStackSection = () => {
             return (
               <div
                 key={index}
-                className="relative group bg-base-200/50 border border-blue-500/40 backdrop-blur-sm rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-md hover:shadow-black/10"
+                className="relative group bg-base-200/50 border border-blue-500/40 rounded-2xl transition-all duration-300 hover:shadow-md hover:shadow-black/10"
               >
                 {/* subtle glow per card */}
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-blue-500/6 blur-2xl rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative z-10 p-5">
                   {/* ── category header ── */}
@@ -144,7 +142,7 @@ const TechStackSection = () => {
 
         {/* ─── OPTIONAL: PROFICIENCY NOTE ─── */}
         <div className="mt-8 text-center">
-          <p className="text-xs text-gray-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed font-inter">
             Actively learning and expanding this toolkit — always exploring new
             technologies to solve problems more effectively.
           </p>

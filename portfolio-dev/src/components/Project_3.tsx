@@ -1,9 +1,9 @@
-import { Cog, Eye, ScrollText, ExternalLink, MoveUp } from "lucide-react";
+import { Cog, ScrollText, MoveUp } from "lucide-react";
 import SmallTechIcons from "./SmallTechIcons";
 import RepoButton from "./buttons/RepoButton";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import heroImage from "../assets/milkflow_bg.png";
+import heroImage from "../assets/lumina_bg.png";
 
 const Project_3 = () => {
   const [readMore, setReadMore] = useState<boolean>(false);
@@ -57,10 +57,10 @@ const Project_3 = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {/* dark gradient overlay at bottom */}
-              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/20 via-black/5 to-transparent" />
 
               {/* floating action pills */}
-              <div className="absolute bottom-4 left-4 flex gap-2 z-10">
+              {/* <div className="absolute bottom-4 left-4 flex gap-2 z-10">
                 <a
                   href="http://lumina.adithyashenal.me"
                   className="inline-flex items-center gap-1.5 bg-blue-500 hover:bg-blue-400 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-lg shadow-blue-500/25 transition-all duration-200 hover:shadow-blue-500/40 hover:-translate-y-0.5"
@@ -68,7 +68,7 @@ const Project_3 = () => {
                   <Eye className="size-3.5" />
                   Live Demo
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -86,7 +86,7 @@ const Project_3 = () => {
               </p>
             </div>
             {/* live URL */}
-            <a
+            {/* <a
               href="http://lumina.adithyashenal.me"
               target="_blank"
               rel="noopener noreferrer"
@@ -94,7 +94,7 @@ const Project_3 = () => {
             >
               <ExternalLink className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               www.lumina.adithyashenal.me
-            </a>
+            </a> */}
             {/* action buttons row */}
             <div className="flex flex-wrap gap-2.5">
               <button className="inline-flex items-center gap-2 border border-blue-500/40 text-blue-400 hover:bg-blue-500/10 text-xs font-semibold px-4 py-2 rounded-full transition-colors duration-200">
@@ -150,7 +150,7 @@ const Project_3 = () => {
                 {!readMore && (
                   <button
                     onClick={() => setReadMore(true)}
-                    className="text-lg text-blue-500 cursor-pointer font-bold animate-pulse"
+                    className="text-lg text-blue-500 cursor-pointer font-bold animate-pulse hover:animate-none"
                   >
                     Read more...
                   </button>
@@ -219,6 +219,7 @@ const Project_3 = () => {
                         animate-pulse 
                         mt-2.5
                         flex gap-2 items-center
+                        hover:animate-none
                         "
                     >
                       <MoveUp className="size-3" /> <p>Collapse content</p>

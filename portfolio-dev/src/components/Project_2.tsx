@@ -44,9 +44,9 @@ const Project_2 = () => {
       </div>
 
       {/* ─── MAIN CARD ─── */}
-      <div className="relative bg-base-200/50 border border-blue-500/40 backdrop-blur-sm rounded-2xl overflow-hidden">
+      <div className="relative bg-base-200/50 border border-blue-500/40 rounded-2xl overflow-hidden">
         {/* subtle ambient glow behind image */}
-        <div className="absolute -top-20 -left-20 w-80 h-80 bg-blue-500/8 blur-3xl rounded-full pointer-events-none" />
+        <div className="absolute -top-20 -left-20 w-80 h-80 bg-blue-500/8 rounded-full pointer-events-none" />
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-0">
           {/* ─── LEFT COLUMN – IMAGE (2/5) ─── */}
@@ -58,7 +58,7 @@ const Project_2 = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {/* dark gradient overlay at bottom */}
-              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/20 via-black/5 to-transparent" />
 
               {/* floating action pills */}
               <div className="absolute bottom-4 left-4 flex gap-2 z-10">
@@ -154,7 +154,7 @@ const Project_2 = () => {
                 {!readMore && (
                   <button
                     onClick={() => setReadMore(true)}
-                    className="text-lg text-blue-500 cursor-pointer font-bold animate-pulse"
+                    className="text-lg text-blue-500 cursor-pointer font-bold animate-pulse hover:animate-none"
                   >
                     Read more...
                   </button>
@@ -218,6 +218,7 @@ const Project_2 = () => {
                         animate-pulse 
                         mt-2.5
                         flex gap-2 items-center
+                        hover:animate-none
                         "
                     >
                       <MoveUp className="size-3" /> <p>Collapse content</p>

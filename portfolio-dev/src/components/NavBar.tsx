@@ -3,7 +3,7 @@ import ThemeController from "./ThemeController";
 const NavBar = () => {
   return (
     <>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-100 border-b border-black/10 shadow-2xl">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,7 +23,7 @@ const NavBar = () => {
                 />{" "}
               </svg>
             </div>
-            <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+            <ul className="menu menu-sm dropdown-content bg-base-200 rounded-box z-1 mt-3 w-52 p-2 shadow">
               <li>
                 <a href="#hero">Home</a>
               </li>
@@ -38,7 +38,7 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <a className="text-sm ml-5">Adithya Shenal</a>
+          <a className="text-sm ml-5 font-semibold uppercase">Adithya Shenal</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

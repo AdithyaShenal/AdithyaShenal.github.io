@@ -6,7 +6,7 @@ const ProjectsSection = () => (
   <section className="bg-base-200 py-16 px-4" id="projects">
     <div className="mx-auto w-full max-w-6xl">
       {/* ─── SECTION HEADING ─── */}
-      <div className="text-center mb-14">
+      <div className="text-center mb-14 font-inter">
         <p className="text-xs uppercase tracking-widest text-base-content/80 font-semibold mb-2">
           Featured Work
         </p>
