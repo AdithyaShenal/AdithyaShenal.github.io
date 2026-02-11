@@ -1,4 +1,4 @@
-import { Cog, Eye, ScrollText, ExternalLink, MoveUp } from "lucide-react";
+import { Cog, Eye, ExternalLink, MoveUp } from "lucide-react";
 import SmallTechIcons from "./SmallTechIcons";
 import RepoButton from "./buttons/RepoButton";
 import { Link } from "react-router-dom";
@@ -99,12 +99,8 @@ const Project_2 = () => {
             </a>
             {/* action buttons row */}
             <div className="flex flex-wrap gap-2.5">
-              <button className="inline-flex items-center gap-2 border border-blue-500/40 text-blue-400 hover:bg-blue-500/10 text-xs font-semibold px-4 py-2 rounded-full transition-colors duration-200">
-                <ScrollText size={14} />
-                Documentation
-              </button>
               <Link
-                to="projectOneArch"
+                to="projectTwoArch"
                 className="inline-flex items-center gap-2 bg-blue-500/15 border border-blue-500/30 text-blue-400 hover:bg-blue-500/25 text-xs font-semibold px-4 py-2 rounded-full transition-colors duration-200"
               >
                 <Cog size={14} />

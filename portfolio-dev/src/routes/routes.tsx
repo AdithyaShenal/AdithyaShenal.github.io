@@ -3,6 +3,7 @@ import App from "../App";
 import ProjectOneArch from "../components/Architectures/ProjectOneArch";
 import ProjectTwoArch from "../components/Architectures/ProjectTwoArch";
 import ProjectThreeArch from "../components/Architectures/ProjectThreeArch";
+import ProjectOneDoc from "../components/Architectures/ProjectOneDoc";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/projectThreeArch",
     element: <ProjectThreeArch />,
+  },
+  {
+    path: "/projectOneDoc",
+    element: <ProjectOneDoc />,
   },
 ]);
 
